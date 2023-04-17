@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 17
+Implementation-Title: Test Project - UI config
+Implementation-Version: 0.0.1-SNAPSHOT
+Content-Package-Type: container
+Content-Package-Id: com.test.core:test-core.ui.config:0.0.1-SNAPSHOT
+Content-Package-Description: UI config package for Test Project
+Content-Package-Roots: /apps/test/osgiconfig
+

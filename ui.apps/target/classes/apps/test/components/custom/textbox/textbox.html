@@ -1,0 +1,89 @@
+<sly data-sly-use.author='${"com.test.core.core.models.Author" @rAttribute="testAttribute"}'></sly>
+
+<!-- query params &key=456 -->
+${request.requestParameterMap['key'][0].toString}
+
+<sly data-sly-list="${request.requestParameterMap.keySet} ">
+    Key : ${item.toString}
+</sly>
+
+
+
+${wcmmode.edit}
+
+${inheritedPageProperties['key']}
+
+<sly data-sly-test.array="${['a','b','c','d']}"></sly>
+
+<sly data-sly-list="${array @ begin=1,  end=2}">
+    ${item}
+</sly>
+
+
+
+<h1> hello my name is ${author.firstName} </h1>
+<h1> hello my last name is ${author.lastName} </h1>
+<h1> is checked ${author.isAuthor} </h1>
+<h1> is page title ${author.pageTitle} </h1>
+<h1> requested var ${author.requestedTitle} </h1>
+<h1> requested var ${author.homePath} </h1>
+<h1> requested var ${author.lastModified} </h1>
+
+<sly data-sly-use.books="com.test.core.core.models.AuthorBooks"></sly>
+
+<h1> ${books.authorName} Books </h1>
+
+<div data-sly-list.item="${books.authorBooks}">
+    <p> Book : <b> ${item} </b> </p>
+
+</div>
+<p> All Books : <b> ${books.authorBooks @ join=","}</b> </p>
+
+<div data-sly-list.item="${books.bookDetailsWithMap}">
+    <p> Book : <b> ${item.bookname} </b> </p>
+    <p> Book : <b> ${item.booksubject} </b> </p>
+    <p> Book : <b> ${item.publishyear} </b> </p>
+
+</div>
+
+
+<sly data-sly-include="urlStructure.html" />
+
+<sly data-sly-use.clientlibs="${'com.adobe.cq.wcm.core.components.models.ClientLibraries' @
+    categories='clientlib-a',
+    async=true,
+    defer=true,
+    onload='console.log(\'loaded: \' + this.src)',
+    crossorigin='anonymous'}">
+    ${clientlibs.jsAndCssIncludes @ context="unsafe"}
+</sly>
+
+<sly data-sly-resource="${ @ resourceType='test/components/custom/page', addSelectors='amp'}">
+
+</sly>
+
+<sly data-sly-use.custom="custom-template.html" />
+<sly data-sly-call="${custom.render @val='hello'}" />
+
+
+<h2> Custom form</h2>
+
+${}
+
+<sly data-sly-list.resourceList="${resource.children}">
+    <sly data-sly-list.inputs="${resourceList.children}">
+        <div data-sly-element="${inputs.element}" > hello</div>
+        <sly data-sly-list.innerList="${inputs.children}">
+            <sly data-sly-list.input="${innerList.children}">
+                <br> Attribute key : ${input.key}
+                <br> Attribute Value : ${input.value}
+
+
+            </sly>
+        </sly>
+    </sly>
+</sly>
+
+<sly data-sly-use.formDataObject="com.test.core.core.models.FormData" />
+
+${formDataObject.slingResourceType}

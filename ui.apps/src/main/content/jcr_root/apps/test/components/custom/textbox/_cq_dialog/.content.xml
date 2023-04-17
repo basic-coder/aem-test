@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Text"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://www.adobe.com/go/aem6_5_docs_component_en#Text">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <tabs
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="background"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <textbox
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Blog "
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Add Text Details">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./bookdetailswithmap">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <bookname
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Enter Title"
+                                                    name="./bookname"/>
+                                                <booksubject
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Enter Title"
+                                                    name="./booksubject"/>
+                                                <publishyear
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Enter Title"
+                                                    name="./publishyear"/>
+                                            </items>
+                                        </field>
+                                    </textbox>
+                                    <first_name
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Enter First Name"
+                                        name="./first_name"
+                                        required="{Boolean}true"/>
+                                    <last_name
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Enter last Name"
+                                        name="./last_name"
+                                        required="{Boolean}true"/>
+                                    <checktext
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldLabel="Enter Checkbox text"
+                                        name="./isAuthor"
+                                        text="check me"
+                                        title="check me"/>
+                                </items>
+                            </column>
+                            <form
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="form"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <authorname
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Enter Card Name"
+                                        name="./authorname"
+                                        required="{Boolean}true"/>
+                                    <flipcards
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Car Options"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}false"
+                                        fieldlabel="Author 's Books">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            name="./books"/>
+                                    </flipcards>
+                                    <textbox
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Blog "
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Add Text Details">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./bookdetailswithmap">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <bookname
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Enter Title"
+                                                    name="./bookname"/>
+                                                <booksubject
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Enter Title"
+                                                    name="./booksubject"/>
+                                                <publishyear
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Enter Title"
+                                                    name="./publishyear"/>
+                                            </items>
+                                        </field>
+                                    </textbox>
+                                </items>
+                            </form>
+                            <custom
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="custom"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <inputs
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Blog "
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Add Elements">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            eaem-nested="NODE_STORE"
+                                            name="./inputs">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <element
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Enter Element without square bracket"
+                                                    name="./element"/>
+                                                <attributes
+                                                    jcr:primaryType="nt:unstructured"
+                                                    jcr:title="Blog "
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                    composite="{Boolean}true"
+                                                    fieldLabel="Add Attributes">
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                        eaem-nested="NODE_STORE"
+                                                        name="./attributes">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <key
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Enter attribute key"
+                                                                name="./key"/>
+                                                            <value
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Enter attribute value"
+                                                                name="./value"/>
+                                                        </items>
+                                                    </field>
+                                                </attributes>
+                                            </items>
+                                        </field>
+                                    </inputs>
+                                </items>
+                            </custom>
+                        </items>
+                    </tabs>
+                </items>
+            </container>
+        </items>
+    </content>
+</jcr:root>

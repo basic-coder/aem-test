@@ -1,0 +1,14 @@
+Resource : ${resource.path} </br>
+
+Scheme : ${request.scheme} </br>
+PORT : ${request.serverPort} <br>
+
+URI : ${request.requestURI} <br>
+
+Selectors: ${request.requestPathInfo.selectors} </br>
+
+SUFFIXs : ${request.requestPathInfo.suffix} </br>
+
+${'Hi, {0} why is {1}' @format=['bhavesh','this']}
+
+${'yyyy-mm-dd' @format=properties.jcr:created}
